@@ -1,0 +1,215 @@
+.hero{
+  background-image: url('../images/dest/hero/hero-bg.jpg');
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: auto;
+  background-color: #EED7C5;
+  padding-top: 40px;
+  &__title{
+    margin-bottom: 9px;
+  }
+  &__subtitle{
+    font: 400 16px/18px $font;
+    color: #131212;
+    margin-bottom: 65px;
+  }
+  &-info{
+    z-index: 2;
+  }
+  &-product{
+    bottom: -10px;
+    right: 0;
+    
+  }
+  &-action{
+    margin-top: -10px;
+    padding-top: 30px;
+    padding-bottom: 74px;
+    background: linear-gradient(180deg, #F8F9F9 0%, #D4D5D5 100%);
+    position: relative;
+    z-index: 1;
+    &::before{
+      content: '';
+      width: 78px;
+      height: 131px;
+      background-image: url('../images/dest/fruct.png');
+      @extend %bg-cover;
+      position: absolute;
+      top: 7px;
+      left: 0;
+      z-index: -1;
+    }
+  }
+}
+.hero-stick{
+  max-width: 170px;
+  margin-bottom: 64px;
+  &__text{
+    font: 700 30px/32px $font;
+    color: #131212;
+  }
+}
+.hero-list{
+  margin-bottom: 60px;
+  &__item{
+    max-width: 245px;
+    &:not(:last-child){
+      margin-bottom: 20px;
+    }
+    &::before{
+      content: '';
+      width: 35px;
+      height: 30px;
+      background-image: url('../images/dest/icons/check.svg');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      margin-right: 10px;
+      flex-shrink: 0;
+    }
+  }
+  &__text{
+    font: 400 18px / 24px $font;
+    color: $black;
+  }
+}
+.hero-price{
+  width: fit-content;
+  &__inner{
+    padding-left: 15px;
+  }
+  &__banner{
+    width: 100px;
+    height: 100px;
+    background-image: url(../images/dest/hero/hero-banner.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    right: 40%;
+    top: -60px;
+    &-text{
+      color: $white;
+      font:700 16px/18px $font-second;
+    }
+    &-discount{
+      color: $white;
+      font:800 35px/36px $font-second;
+    }
+  }
+  &__decor,&__inner{
+    grid-area: 1/2;
+  }
+  &__inner{
+    &::after{
+      content: '';
+      width: 16px;
+      height: 30px;
+      background-image: url(../images/dest/hero/arr-right.png);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      flex-shrink: 0;
+      order:1;
+      margin-right: 10px;
+    }
+  }
+  &__old{
+    margin-right: 10px;
+    &-text{
+      color: $white;
+      font:400 16px/21px $font-second;
+    }
+    &-count{
+      color: $white;
+    font: 400 35px/35px $font-second;
+    &::after{
+      content: '';
+      position: absolute;
+      width: 90%;
+      height: 4px;
+      border-radius: 4px;
+      background-color: $white;
+      left: 0;
+      top:50%;
+      transform: translateY(-50%);
+    }
+    }
+  }
+  &__current{
+    order:2;
+    &-text{
+      font:400 16px/21px $font-second;
+      color: $white;
+    }
+    &-count{
+      color: $white;
+      font: 800 50px/50px $font-second;
+    }
+  }
+}
+.timer{
+  padding: 0 15px;
+  margin-bottom: 35px;
+  &__text{
+    font:400 16px/17px $font;
+    margin-bottom: 10px;
+  }
+  &-count{
+    background-color:#F21631;
+    color: $white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 82px;
+    height: 57px;
+    font:600 50px/55px $font;
+    margin-bottom: 8px;
+    &__text{
+      font:400 16px/17px $font;
+    }
+  }
+  &-delimeter{
+    font: 600 57px/57px $font;
+    color: $default;
+    margin: -5px 5px 0;
+  }
+}
+.timer-second{
+  margin-bottom: 20px;
+}
+@media (max-width: 420px) {
+  .hero-product {
+    width: 130px;
+}
+}
+@media (max-width: 390px) {
+  .hero {
+    padding-top: 15px;
+    background-color: #ea596a;background-position: 50% 0;
+}
+.hero__subtitle {
+  margin-bottom: 35px;
+}
+  .hero-list__item {
+    max-width: 200px;
+}
+.hero-product {
+  bottom: 82%;
+}
+.hero-price__inner {
+  padding-left: 0px;
+  margin: 0 auto;
+}
+}
+@media (max-width: 320px) {
+  .hero-list__item {
+    max-width: 190px;
+}
+.hero-stick {
+  max-width: 170px;
+  margin-bottom: 50px;
+}
+.hero-price__banner {
+  right: 25%;
+}
+}

@@ -1,0 +1,59 @@
+.reception {
+  padding: 64px 0 40px;
+  background: linear-gradient(180deg, #F8F9F9 0%, #D4D5D5 100%);
+  position: relative;
+  &::before{
+    content: '';
+    position: absolute;
+    top: 40px;
+    right: 0;
+    width: 78px;
+    height: 131px;
+    background-image: url('../images/dest/fruct-right.png');
+    @extend %bg-cover;
+  }
+  &__title {
+    max-width: 320px;
+    margin-bottom: 30px;
+  }
+}
+
+.reception-items {
+  counter-reset: item;
+  max-width: 420px;
+  margin-bottom: 30px;
+
+  &__item {
+    position: relative;
+    min-height: 156px;
+    padding: 30px;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    background: #FFFFFF;
+    box-shadow: 9px 9px 15px rgba(124, 124, 124, 0.25);
+
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+
+    &::before {
+      counter-increment: item;
+      content: counter(item);
+      grid-area: 1/1;
+      color: #DCFFF2;
+      font: 900 150px/150px $font;
+      display: block;
+    }
+
+    &-text {
+      font: 400 20px/24px $font;
+      color: $black;
+      text-align: center;
+      max-width: 230px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid $black;
+      grid-area: 1/1;
+    }
+  }
+}

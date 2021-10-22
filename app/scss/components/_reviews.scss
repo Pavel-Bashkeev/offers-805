@@ -1,0 +1,65 @@
+.reviews{
+  padding: 75px 0 37px;
+  &__title{
+    font: 800 30px / 35px $font;
+    margin-bottom: 30px;
+  }
+}
+.swiper-wrapper{
+  padding: 30px 0 60px;
+}
+.slide{
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  max-width: 373px;
+  margin: 0 auto;
+  &-top{
+    padding: 10px 15px;
+    &__box{
+      widows: 40px;
+      height: 40px;
+      border-radius: 50%;
+      overflow: hidden;
+      margin-right: 10px;
+    }
+    &__name{
+      font: 600 14px/19px $font;
+    }
+  }
+  &-icons{
+    padding: 12px 15px;
+    &__link{
+      &:not(:last-child){
+        margin-right: 12px;
+      }
+      &:last-child{
+        margin-left: auto;
+      }
+    }
+  }
+  &-comment{
+    padding: 30px 15px 15px;
+
+    &__text{
+      font: 500 18px/24px $font-second;
+      color: $black;
+      &:first-child{
+        margin-bottom: 10px;
+      }
+    }
+  }
+}
+.swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal{
+  bottom: 0;
+}
+.swiper-pagination-bullet-active{
+  background-color: #7AB1B0;
+}
+.swiper-pagination-bullet{
+  width: 18px;
+  height: 18px;
+}
+@media (max-width: 375px) {
+  .slide {
+    max-width: 310px;
+}
+}

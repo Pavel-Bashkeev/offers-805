@@ -1,0 +1,24 @@
+@import '../../node_modules/reset-css/sass/reset';
+@import './settings/classFrame';
+@import './settings/vars';
+@import './vendor/mixins';
+@import './settings/fonts';
+@import './settings/global';
+
+
+@import './components/hero';
+@import './components/action';
+@import './components/description';
+@import './components/factor';
+@import './components/helps';
+@import './components/ingredients';
+@import './components/steps';
+@import './components/reception';
+
+
+@import './components/reviews';
+@import './components/buy';
+@import './components/form';
+@import './components/footer';
+
+

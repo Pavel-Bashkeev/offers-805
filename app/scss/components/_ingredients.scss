@@ -1,0 +1,32 @@
+.ingredients{
+  padding: 61px 0;
+  background-color:#F2F2F2;
+  &__title{
+    margin-bottom: 50px;
+    max-width: 400px;
+  }
+}
+.ingredients-items{
+  &__item{
+    background-color: #7AB1B0;
+    padding:19px 30px 23px 15px;
+    &:not(:last-child){
+      margin-bottom: 14px;
+    }
+    &-img{
+      width: 105px;
+      height: 105px;
+      border-radius: 50%;
+      margin-right: 20px;
+    }
+    &-title{
+      font: 700 22px/25px $font;
+      color: $white;
+      margin-bottom: 10px;
+    }
+    &-text{
+      font: 400 19px/22px $font;
+      color: $white;
+    }
+  }
+}

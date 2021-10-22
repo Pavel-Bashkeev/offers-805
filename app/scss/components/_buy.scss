@@ -1,0 +1,50 @@
+.buy{
+  background: linear-gradient(180deg, #F8F9F9 0%, #D5D6D6 100%);
+  padding: 70px 30px;
+  &__title{
+    max-width: 330px;
+    margin-bottom: 30px;
+  }
+  &-list{
+    counter-reset: item;
+    position: relative;
+    z-index: 1;
+    &::before{
+      content: '';
+      position: absolute;
+      top: 16px;
+      left: 14px;
+      height: 90%;
+      width: 4px;
+      background-color: #7AB1B0;
+      z-index: -1;
+    }
+    &__item{
+      &:not(:last-child){
+        margin-bottom: 22px;
+      }
+      &::before{
+        counter-increment: item;
+        content: counter(item);
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        background-color: #7AB1B0;
+        color: $white;
+        font: 900 18px/21px $font;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 20px;
+        flex-shrink: 0;
+      }
+      &-text{
+        color: #2c2929;
+        padding: 0 0 15px;
+        position: relative;
+        max-width: 260px;
+        font: 900 18px/21px $font;
+      }
+    }
+  }
+}

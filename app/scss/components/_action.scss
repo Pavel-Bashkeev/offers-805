@@ -1,0 +1,45 @@
+.action{
+  padding: 60px 0 80px;
+  background-image: url('../images/dest/action/action-bg.jpg');
+  &__title{
+    margin-bottom: 50px;
+    max-width: 265px;
+    padding-left: 15px;
+  }
+}
+.action-list{
+  &__item{
+    background-color: #596e79;
+    padding: 2px 0px 2px 15px;
+    max-width: 280px;
+    min-height: 57px;
+    &:not(:last-child){
+      margin-bottom: 14px;
+    }
+    &::before{
+      content: '';
+      width: 36px;
+      height: 31px;
+      background-image: url('../images/dest/icons/check-second.svg');
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      margin-right: 9px;
+      flex-shrink: 0;
+    }
+    &-text{
+      font: 700 18px / 24px $font-second;
+      color: $white;
+      margin-right: 9px;
+    }
+    &::after{
+      content: '';
+      width: 26px;
+      height: 29px;
+      background-image: url('../images/dest/action/arrow.png');
+      @extend %bg-cover;
+      flex-shrink: 0;
+      margin-left: auto;
+    }
+  }
+}

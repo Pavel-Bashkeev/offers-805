@@ -1,0 +1,44 @@
+.helps {
+  padding: 60px 0;
+
+  &__title {
+    margin-bottom: 30px;
+  }
+
+  &-product {
+    max-width: 360px;
+    margin-left: auto;
+    margin-bottom: 50px;
+  }
+
+  &__text {
+    font: 700 22px/25px $font;
+    color: #1e1e1e;
+    margin-bottom: 34px;
+  }
+}
+
+.helps-list {
+  margin-bottom: 35px;
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+
+    &::before {
+      content: '';
+      width: 35px;
+      height: 30px;
+      background-image: url('../images/dest/icons/check-pink.svg');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      margin-right: 10px;
+      flex-shrink: 0;
+    }
+    &-text{
+      font: 400 19px/25px $font-second;
+      color: #1e1e1e
+    }
+  }
+}
